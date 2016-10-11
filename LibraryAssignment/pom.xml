@@ -228,6 +228,28 @@
 				      <artifactId>ejb3-persistence</artifactId>
 				      <version>1.0.1.GA</version>
     			</dependency>
+    			
+    			<dependency>
+				    <groupId>org.seleniumhq.selenium</groupId>
+				    <artifactId>selenium-server</artifactId>
+				    <version>2.53.1</version>
+				</dependency>
+    			<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+				<dependency>
+				    <groupId>org.testng</groupId>
+				    <artifactId>testng</artifactId>
+				    <version>6.8.8</version>
+				</dependency>
+				
+				<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+				<dependency>
+				    <groupId>org.seleniumhq.selenium</groupId>
+				    <artifactId>selenium-java</artifactId>
+				    <version>2.53.1</version>
+				</dependency>
+											
+				    			
+    			
        </dependencies>
        
        <build>
