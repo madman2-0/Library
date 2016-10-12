@@ -253,6 +253,7 @@
        </dependencies>
        
        <build>
+
               <plugins>
                      <plugin>
                            <artifactId>maven-eclipse-plugin</artifactId>
@@ -268,6 +269,22 @@
                                   <downloadJavadocs>true</downloadJavadocs>
                            </configuration>
                      </plugin>
+                     
+                     <!-- Following plugin executes the testng tests -->
+			            <plugin>
+			                <groupId>org.apache.maven.plugins</groupId>
+			                <artifactId>maven-surefire-plugin</artifactId>
+			                <version>2.14.1</version>
+			                <configuration>
+			                    <!-- Suite testng xml file to consider for test execution -->
+			                    <suiteXmlFiles>
+			                        <suiteXmlFile>testng.xml</suiteXmlFile>
+			                        <suiteXmlFile>suites-test-testng.xml</suiteXmlFile>
+			                    </suiteXmlFiles>
+			                </configuration>
+			            </plugin>
+                     
+                     
                      <plugin>
                            <groupId>org.apache.maven.plugins</groupId>
                            <artifactId>maven-compiler-plugin</artifactId>
