@@ -12,6 +12,7 @@
               <org.springframework-version>4.0.1.RELEASE</org.springframework-version>
               <org.aspectj-version>1.6.10</org.aspectj-version>
               <org.slf4j-version>1.6.6</org.slf4j-version>
+              <suiteXmlFile>testng.xml</suiteXmlFile>
        </properties>
        <dependencies>
               <!-- Spring -->
@@ -108,6 +109,13 @@
                      <artifactId>jstl</artifactId>
                      <version>1.2</version>
               </dependency>
+              
+              
+              <dependency>
+				    <groupId>xml-apis</groupId>
+				    <artifactId>xml-apis</artifactId>
+				    <version>1.4.01</version>
+				</dependency>
 
               <!-- Test -->
               <dependency>
@@ -232,7 +240,7 @@
     			<dependency>
 				    <groupId>org.seleniumhq.selenium</groupId>
 				    <artifactId>selenium-server</artifactId>
-				    <version>2.53.1</version>
+				    <version>3.0.0</version>
 				</dependency>
     			<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 				<dependency>
@@ -245,9 +253,14 @@
 				<dependency>
 				    <groupId>org.seleniumhq.selenium</groupId>
 				    <artifactId>selenium-java</artifactId>
-				    <version>2.53.1</version>
+				    <version>3.0.0</version>
 				</dependency>
-											
+			
+			<dependency>
+		        <groupId>org.seleniumhq.selenium</groupId>
+		        <artifactId>selenium-firefox-driver</artifactId>
+		        <version>3.0.0</version>
+		    </dependency>  								
 				    			
     			
        </dependencies>
@@ -277,10 +290,9 @@
 			                <version>2.14.1</version>
 			                <configuration>
 			                    <!-- Suite testng xml file to consider for test execution -->
-			                    <suiteXmlFiles>
-			                        <suiteXmlFile>testng.xml</suiteXmlFile>
-			                        <suiteXmlFile>suites-test-testng.xml</suiteXmlFile>
-			                    </suiteXmlFiles>
+			                    
+			                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+			                    
 			                </configuration>
 			            </plugin>
                      
@@ -308,5 +320,4 @@
               </plugins>
        </build>
 </project>
-
 
