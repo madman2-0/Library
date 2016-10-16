@@ -9,7 +9,7 @@ public class VerifyTitle {
 	
 	@Test
 	public void VerifyTitleTest(){
-		System.setProperty("webdriver.gecko.driver","D:\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver","E:\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		driver.get("http://localhost:8080/Ambuj/");
 		Assert.assertTrue(driver.getTitle().contains("GalaxE Home"));
